@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #020204;
+    color: white;
+    overflow-x: hidden;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; 
+    pointer-events: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(2, 2, 4, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar .logo {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #fff;
+}
+
+.scroll-container {
+    position: relative;
+    z-index: 2;
+}
+
+.scene {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+.text-block {
+    max-width: 400px;
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 40px;
+    border-left: 3px solid #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.scene:nth-child(1) .text-block { border-left-color: #00ff00; } /* Hulk Green */
+.scene:nth-child(2) .text-block { border-left-color: #00e5ff; } /* Containment Blue */
+.scene:nth-child(3) .text-block { border-left-color: #ffaa00; } /* Breach Yellow */
+.scene:nth-child(4) .text-block { border-left-color: #ff3333; } /* Assimilation Red */
+.scene:nth-child(5) .text-block { border-left-color: #ff0033; } /* Venom Red */
+
+.text-block h1 {
+    font-size: 2rem;
+    margin: 0 0 15px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.text-block p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #bbb;
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.venom-locked .scroll-container .scene:nth-child(5),
+body.venom-locked .scroll-container .scene:nth-child(6),
+body.venom-locked .scroll-container .scene:nth-child(7) {
+    display: none !important;
+}

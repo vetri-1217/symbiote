@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Rivals - Symbiote Evolution</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">MARVEL RIVALS</div>
+        <ul class="nav-links">
+            <li><a href="#hulk-section">HULK</a></li>
+            <li><a href="#thor-section">THOR</a></li>
+            <li><a href="#wolverine-section">WOLVERINE</a></li>
+            <li><a href="#blackpanther-section">BLACK PANTHER</a></li>
+            <li><a href="#venom-section">VENOM</a></li>
+        </ul>
+    </nav>
+
+    <div id="canvas-container"></div>
+
+    <div class="scroll-container">
+        <!-- PHASE 0: HULK -->
+        <section class="scene" id="hulk-section">
+            <div class="text-block" style="border-left-color: #00ff00;">
+                <h1>BRUCE BANNER</h1>
+                <p>Subject exposed to extreme levels of Gamma radiation. Heart rate critically elevated. Transformation
+                    imminent.</p>
+            </div>
+        </section>
+
+        <!-- PHASE 1: THOR -->
+        <section class="scene" id="thor-section">
+            <div class="text-block" style="border-left-color: #00aaff;">
+                <h1>THOR ODINSON</h1>
+                <p>Asgardian physiology detected. High voltage bio-electric current stabilizing. Wielding uru metal
+                    artifact.</p>
+            </div>
+        </section>
+
+        <!-- PHASE 2: WOLVERINE -->
+        <section class="scene" id="wolverine-section">
+            <div class="text-block" style="border-left-color: #ffcc00;">
+                <h1>LOGAN</h1>
+                <p>Mutant healing factor active. Adamantium laced skeletal structure confirmed. Feral instincts
+                    overriding.</p>
+            </div>
+        </section>
+
+        <!-- PHASE 3: BLACK PANTHER -->
+        <section class="scene" id="blackpanther-section">
+            <div class="text-block" style="border-left-color: #8a2be2;">
+                <h1>BLACK PANTHER</h1>
+                <p>King of Wakanda. Vibranium habit and apex martial arts capability. Lethal protector.</p>
+            </div>
+        </section>
+
+        <!-- PHASE 4: CONTAINMENT -->
+        <section class="scene" id="containment-section">
+            <div class="text-block" style="border-left-color: #00e5ff;">
+                <h1>CONTAINMENT</h1>
+                <p>Specimen V-252 is an amorphous extraterrestrial symbiote. Currently secured within a reinforced
+                    silica environment.</p>
+            </div>
+        </section>
+
+        <!-- PHASE 4: BREACH -->
+        <section class="scene">
+            <div class="text-block" style="border-left-color: #ffaa00;">
+                <h1>BREACH</h1>
+                <p>Structural integrity compromised. The specimen exhibits predatory behavior, aggressively seeking a
+                    compatible biological host.</p>
+            </div>
+        </section>
+
+        <!-- PHASE 5: ASSIMILATION -->
+        <section class="scene">
+            <div class="text-block" style="border-left-color: #ff3333;">
+                <h1>ASSIMILATION</h1>
+                <p>Host proximity detected. The organism converges rapidly, utilizing liquid properties to bind
+                    seamlessly to organic material.</p>
+            </div>
+        </section>
+
+        <!-- PHASE 7: WE ARE VENOM -->
+        <section class="scene" id="venom-section">
+            <div class="text-block final-text" style="border-left-color: #ff0033;">
+                <h1 style="color: #ff0033;">WE ARE VENOM</h1>
+                <p>We can do whatever we want.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Import Map for Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="scene.js?v=32"></script>
+</body>
+
+</html>
